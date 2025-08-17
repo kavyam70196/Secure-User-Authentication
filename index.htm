@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auth App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Register Page -->
+  <section id="registerPage" class="page">
+    <div class="auth-container">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" id="regUsername" placeholder="Enter Username" required>
+        <input type="password" id="regPassword" placeholder="Enter Password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerMsg" class="success"></p>
+      <p>Already have an account? 
+        <a href="#" onclick="showPage('loginPage')">Login</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Login Page -->
+  <section id="loginPage" class="page active">
+    <div class="auth-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Enter Username" required>
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMsg" class="error"></p>
+      <p><a href="#" onclick="forgotPassword()">Forgot Password?</a></p>
+      <p>Don't have an account? 
+        <a href="#" onclick="showPage('registerPage')">Register</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Home Page -->
+  <section id="homePage" class="page">
+    <div class="auth-container">
+      <h2>Welcome, <span id="user"></span> 🎉</h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
